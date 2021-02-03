@@ -2,11 +2,22 @@
 #define BUILDER_H
 
 #include "structuretype.h"
+#include "linkedlist.h"
+#include "stack.h"
 class builder
 {
 private:
+	int m_nBuilderNum;
+	linkedlist *req;
+	stack *st;
+	int m_nPrevSector;
+
+	void freeMemory();
 
 public:
+	builder(void);
+	~builder(void);
+
     // The requests are stored in a linked list in the builder
     // New requests must be placed at the front of the list.
     // Each request specifies a sector and type of structure to build.
