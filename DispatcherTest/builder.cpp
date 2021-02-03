@@ -75,7 +75,7 @@ bool builder::doCycle()
 
 void builder::returnHome() 
 {
-	while(st->isEmpty())
+	while(st->isEmpty() == false)
 	{
 		event *ev = st->pop();
 
@@ -93,7 +93,7 @@ void builder::returnHome()
 			printf("Builder #%d: Connected to solar energy collector in sector %d\n", m_nBuilderNum, sector);
 			break;
 		case UNK:		
-			printf("Builder #%d: Moving to sector %d", m_nBuilderNum, sector);
+			printf("Builder #%d: Moving to sector %d\n", m_nBuilderNum, sector);
 			break;
 
 		}

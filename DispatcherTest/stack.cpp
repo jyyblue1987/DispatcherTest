@@ -4,6 +4,7 @@
 
 stack::stack(void)
 {
+	tail = NULL;
 }
 
 stack::stack(int count)
